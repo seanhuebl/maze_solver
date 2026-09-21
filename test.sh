@@ -1,1 +1,4 @@
-python3.12 -m unittest discover -s src
+#!/usr/bin/env bash
+set -euo pipefail
+
+python3 -m unittest discover -s src -p "test*.py"

@@ -177,6 +177,8 @@ class Maze():
                             current.draw_move(self._cells[d_i][d_j], undo=True)
                 else:
                     return False
+
+        return False
                 
     def _wall_check(self, i: int, j: int, direction: str) -> bool:
         cell = self._cells[i][j]
