@@ -98,6 +98,9 @@ class Cell:
             undo (bool): If True, draws the move in gray (undo); otherwise, in red.
         """
         
+        if self._win is None:
+            return
+
         # Calculate the center points of both cells to draw a move between them.
         self_center = Point((self._x1 + self._x2) / 2, (self._y1 + self._y2) / 2)
         to_cell_center = Point((to_cell._x1 + to_cell._x2) / 2, (to_cell._y1 + to_cell._y2) / 2)
